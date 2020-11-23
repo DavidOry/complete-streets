@@ -118,6 +118,15 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
+      .garden_marker {
+        border: none;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-image: url(garden-15.svg);
+        background-color: rgba(0, 0, 0, 0);
+      }
+
       .clearfix { display:block; }
       .clearfix:after {
         content:'.';
@@ -209,71 +218,43 @@
       });
 
       var attractions = {
-        "type": "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -72.59094069,
-                44.260754
-              ]
-            },
-            "properties": {
-							"label": "3A2",
-              "address": "187 Lower State Street",
-              "city": "Montpelier",
-              "country": "United States",
-              "crossStreet": "west of Bailey Ave",
-              "postalCode": "05602",
-              "state": "VT",
-							"description": "Three House-Garden-Design (HGD): one located at #187 Lower State St. (my favorite with many decorative items) and another HGD (house set back very near #187, probably #189 which was 'the original now refurbished in the area,' and #185 not bad and views of the Winooski."
-            }
-          },
-					{
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -72.58308472,
-                44.26156863
-              ]
-            },
-            "properties": {
-							"label": "3A4",
-              "address": "134 State Street",
-              "city": "Montpelier",
-              "country": "United States",
-              "crossStreet": "west of Governor Aiken Ave",
-              "postalCode": "05602",
-              "state": "VT",
-							"streetViewUrl": "https://www.google.com/maps/@44.261797,-72.5829275,3a,75y,203.63h,97.03t/data=!3m7!1e1!3m5!1sn2yWLXH4J7MAjMo381TEpg!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3Dn2yWLXH4J7MAjMo381TEpg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D276.48837%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192",
-							"description": "A sculpture garden is located on State Street between the Visitor Center and the Arts Council building itself often open with art works displayed. The sculptures are changed so no specific descriptions are listed here. The Arts Council building was 'the childhood home of Senator Patrick Leahy'"
-            }
-          },
-					{
-            "type": "Feature",
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                -72.58252917,
-                44.26149768
-              ]
-            },
-            "properties": {
-							"label": "3A5",
-              "address": "132 State Street",
-              "city": "Montpelier",
-              "country": "United States",
-              "crossStreet": "at Governor Aiken Ave",
-              "postalCode": "05602",
-              "state": "VT",
-							"streetViewUrl": "https://www.google.com/maps/@44.2616992,-72.5825078,3a,87.6y,213.9h,83.97t/data=!3m6!1e1!3m4!1sHth738eX9mrZRyDu3dhSGw!2e0!7i16384!8i8192",
-							"description": "Three House-Garden-Design (HGD) located at #126, #128, and #132 State Street. Three classic Queen Anne Style original homes for some Montpelier businessmen and now State Government Buildings. One of the three is one of my two favorite Queen Anne style homes in Montpelier, located at #132. Do you agree?"
-            }
-          }
-        ]
+      "type": "FeatureCollection",
+      "name": "sites_and_sights_v00",
+      "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+      "features": [
+      { "type": "Feature", "properties": { "code": "3B1", "description": "Artisan's Hand Sculptures", "detailed_description": "Sculptures located in front of Artisans’ Hand, a part of City Center on the corner of State and Main Streets. (five larger sculptures, my favorite being the seals; What is your favorite?)", "address": null, "category": "Art" }, "geometry": { "type": "Point", "coordinates": [ -72.575092, 44.260165 ] } },
+      { "type": "Feature", "properties": { "code": "3A1", "description": "Gravestones & Sculpted Rock", "detailed_description": "Gravestones and sculpted rock outcroppings in the eastern section of Green Mountain Cemetery (The best well known sculpture of the Green Mountain Cemetery is of the young girl Margaret, which is worth visiting several times, located off the road up the hill on the east or the right side very close to the upper northeastern corner. There is one other nice sculpture of a woman nearby slightly down the east side of the hill from Margaret and another easy to find sculpture in this area is of a mourning woman standing over a lying down figure of Jesus on a rock slab with the label The Resurrection. The rock outcropping which has been sculpted you may want to walk to is also on the eastern side, but is very low next to Route 2.", "address": null, "category": "Art" }, "geometry": { "type": "Point", "coordinates": [ -72.594241, 44.256661 ] } },
+      { "type": "Feature", "properties": { "code": "3B12", "description": "Mural", "detailed_description": "On the back of the Montpelier Rec Center there is a Mural entitled Celebrate the Arts. (Which person depicted in the Mural isyour favorite? Mine is the short girl on the stool with the glasses.) P.S. On October 15th I looked at the faded murals on the back of Walgreen’s Pharmacy for the only time in my 24 years here. Except for the obscene\ngraffiti on one panel, the others are sort of fun even though faded. I liked the one with the balloon. I’m tempted to ask Walgreen to spruce them up. Would that be awesome?", "address": null, "category": "Art" }, "geometry": { "type": "Point", "coordinates": [ -72.575572, 44.256801 ] } },
+      { "type": "Feature", "properties": { "code": "3A4", "description": "Vermont Arts Council Art Garden", "detailed_description": "A sculpture garden is located on State St. between the Visitor Center and the Arts Council building itself often open with art works displayed; (The sculptures are changed so no specific descriptions are listed here. The Arts Council building was ‘the childhood home of Senator Leahy.’", "address": null, "category": "Art" }, "geometry": { "type": "Point", "coordinates": [ -72.583148, 44.261407 ] } },
+      { "type": "Feature", "properties": { "code": "4A8", "description": "Wrought Iron Bench", "detailed_description": "Wrought iron chair-like bench on Terrace] St’s east side just up-north of the Redstone Mansion entrance (My favorite bench; I love the\nhummingbird design.)", "address": null, "category": "Art" }, "geometry": { "type": "Point", "coordinates": [ -72.586253, 44.265517 ] } },
+      { "type": "Feature", "properties": { "code": "3A7", "description": "Garden", "detailed_description": "Garden behind the state house accessed on a path just west of the State House", "address": null, "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.580017, 44.262538 ] } },
+      { "type": "Feature", "properties": { "code": "1A8", "description": "Rain Gardens", "detailed_description": "The rain garden located near the intersection of Bailey St. and the\nBike Path or Siboinebi River Trail in front of the Vermont State\nEmployees Credit Union (is my favorite Montpelier Rain Gardens. Other\nrain gardens are found at Hunger Mountain Co-op and Union St. School.\nYou can find out more about Montpelier’s Green Storm War\nInfrastructure on a sign at the 133 State St. Parking Lot.)", "address": null, "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.585044, 44.260944 ] } },
+      { "type": "Feature", "properties": { "code": "2B3", "description": "Red Oaks", "detailed_description": "‘Another original farm house’ located one lot north (or down the hill) from #203 on the western side Berlin St. (‘nicely refurbished according to renter’)", "address": "218 Berlin St", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.567195, 44.246839 ] } },
+      { "type": "Feature", "properties": { "code": "4A14", "description": "Silver Maple", "detailed_description": "Silver Maple tree at 43 Terrace St. and a nice tree (cottonwood?) at 45 Terrace", "address": "43 Terrace St", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.587217, 44.267049 ] } },
+      { "type": "Feature", "properties": { "code": "1D4", "description": "Spruce Trees", "detailed_description": "Trees located at #2 Hillcrest Dr off Colonial Drive (Three different bluish colored Spruce species in the front yard, etc.)", "address": "2 Hillcrest Dr", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.580783, 44.246732 ] } },
+      { "type": "Feature", "properties": { "code": "1D2", "description": "Tiger Tail Spruce", "detailed_description": "HGD located at 116 Northfield St. (especially the huge Tiger Tail Spruce, and gardens)", "address": "116 Northfield St", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.58087, 44.251085 ] } },
+      { "type": "Feature", "properties": { "code": "3B13", "description": "Tree", "detailed_description": "Catalpa tree located on the eastern side yard of #31 E. State St. (Note the big leaves.)", "address": "31 E State Street", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.573589, 44.259323 ] } },
+      { "type": "Feature", "properties": { "code": "3C3", "description": "Tree", "detailed_description": "Large Gingko tree located outside the brick office building at #143 Barre St. (one of my favorite two trees in Montpelier; After you have viewed several trees, what is your favorite tree or trees.)", "address": "143 Barre", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.572657, 44.255038 ] } },
+      { "type": "Feature", "properties": { "code": "4A15", "description": "Tulip Tree", "detailed_description": "HGD at the northwest corner of Clarendon Ave. and Dwinell St. (I was informed this was built in the Edwardian style, perhaps because it was a fine home built in the very early 20th century when Edward was Britain’s King. Edwardian homes according online sources are more difficult to identify, but this home does feature gardens including a permaculture garden, balconies and  porches often typical features of this style. There is a small to medium nut tree. I believe I was told it was a black walnut tree, but I very well might be wrong.)", "address": "Liberty @ College St", "category": "Flora & Fauna" }, "geometry": { "type": "Point", "coordinates": [ -72.562443, 44.258185 ] } },
+      { "type": "Feature", "properties": { "code": "3B3", "description": "City Hall Clock", "detailed_description": "Montpelier City Hall: Most Montpelier residents know well the City Hall, but I imagine few have viewed the massive mechanical clock inside in the tower. After the Pandemic, a small group may request the City Hall’s custodian to take you up inside the tower as he did for a small group on a ‘Walks with Harris.’ Maybe you will be lucky as wewere or maybe not.", "address": null, "category": "Miscellany" }, "geometry": { "type": "Point", "coordinates": [ -72.575832, 44.259307 ] } },
+      { "type": "Feature", "properties": { "code": "3D1", "description": "College Hall, CFA", "detailed_description": "College Hall the dominant CFA Building next to the CFA Commons (Note in the office on the left side on the main entrance you probably can pick up the Self-Guided Historical Walking Tour of most of the current college buildings. Climb the stairs to see the high ceiling marvelous auditorium with organ, and if you are lucky you can enlist\nthe help of the responsible administrator person to take a small group of walkers to the lookout room on the roof.)", "address": "36 College Street", "category": "Miscellany" }, "geometry": { "type": "Point", "coordinates": [ -72.56773, 44.255095 ] } },
+      { "type": "Feature", "properties": { "code": "4C12", "description": "Elm Court Park", "detailed_description": "Elm Court Park located at NW Corner of Elm and Court St. (‘a small is beautiful’ parklet on a busy corner selected because  busy corners need beauty also)", "address": null, "category": "Miscellany" }, "geometry": { "type": "Point", "coordinates": [ -72.575521, 44.261749 ] } },
+      { "type": "Feature", "properties": { "code": "3C10", "description": "Historic Mansion & Hidden Walkway", "detailed_description": "A large historical mansion (in index listed as historical home) at 100 East State St. (‘built by those with wealth from granite manufacturing at the turn of the19th-20th century, a building fulfilling several different functions from a college dorm to a college president’s home and now a center for a law firm.’ It has a hidden 3 level stone walk entrance well below the main entrance, an impressive pine in front of mansion and you may scare up a large number of deer in a deer yard behind the mansion. However, it is not recommended for ordinary walkers to explore the many unpathed slopes of these woods.)", "address": null, "category": "Miscellany" }, "geometry": { "type": "Point", "coordinates": [ -72.56958, 44.257706 ] } },
+      { "type": "Feature", "properties": { "code": "4B5", "description": "Meditation Park", "detailed_description": "Mini meditation park ‘Courage of Blooms’ (off the west side of #10 Baldwin St., where a Queen Anne’s Style building of a state office building is located (nice benches, sculpture and engraved poems in this meditative park)", "address": "10 Baldwin St", "category": "Miscellany" }, "geometry": { "type": "Point", "coordinates": [ -72.582823, 44.262832 ] } },
+      { "type": "Feature", "properties": { "code": "1A5", "description": "Dog River Confluence", "detailed_description": "Another view of the Dog River: If you continue down Dog River\nRd. after breaking off from the road which goes to the Amtrak Station,\nyou will come to the Dog River Sport Fields and Dog Park. Cross the\nfields toward the river and nearby some discarded soccer nets toward\nthe eastern side of the field, you will come to a clear but narrow path\ndown to the river bank. (There looks like there maybe another path\ngoing to same basic view, but I have not tried it.)", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.601201, 44.25598 ] } },
+      { "type": "Feature", "properties": { "code": "4D1", "description": "Hubbard Park Access", "detailed_description": "As mentioned, Hubbard Park is both well-known to Montpelier folk with many well-marked trails (finally) which are not often noted] in this booklet. However, I am including in Sub Area 4D a path from the south side of Finch Rd (formerly known as City Dump Road) almost directly across from the entrance to the North Branch Nature Center). There is a fairly clear trailhead sign a just short distance from the Elm St.-Finch Rd. intersection eventually heading up to the well-known New Shelter. The trail is fairly easy to follow except in fall foliage season when once I got lost for a short while. This trail seems not as poplar, but has some nice views of more than the dump. Also, it has at least one marked side trail back to North Park St. and Elm.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.576011, 44.28463 ] } },
+      { "type": "Feature", "properties": { "code": "4C5", "description": "Mill Pond Park", "detailed_description": "Two other views of the North Branch, one from a public-canoe launching mini park (no sidewalk access) between Summer St. and  Pearl St.’s intersection with Elm St.; another but a different narrow perspective view of the North Branch from the sidewalk of the house just north of Birchgrove Bakery (also a pleasant view of its side yard seen through some evergreen trees.)", "address": "337 Elm St", "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.569408, 44.268113 ] } },
+      { "type": "Feature", "properties": { "code": "3B4", "description": "Park Access", "detailed_description": "HGD #27 East State St. (narrow, small home on small lot packed with flowers; small is beautiful)", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.573874, 44.258325 ] } },
+      { "type": "Feature", "properties": { "code": "4A11", "description": "Redstone Entrance Gate", "detailed_description": "Redstone’s Entrance Gate to a path up to the Redstone Mansion, the gate being at the west end of Baldwin St. off Terrace Rd. (the Mansion has a long interesting history. I recommend you read it after ‘googling’ Redstone Mansion, Montpelier.)", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.585282, 44.263598 ] } },
+      { "type": "Feature", "properties": { "code": "1B6", "description": "Trail Access", "detailed_description": "Garden located on the left side of the home at the dead-end of the\neastern side of Pleasant St. (If you see the homeowner, he\/she may let\nyou walk on the path through the garden to a nice view point toward\nHubbard Park Hill.)", "address": "29 Pleasant St", "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.576036, 44.253694 ] } },
+      { "type": "Feature", "properties": { "code": "1B8", "description": "Trail Access", "detailed_description": "Steep Trail in Woods to National Life Hill: Find one end of path at\nthe southwest corner of Memorial Drive and Northfield St. and climb.\nJust before the National Life Complex, this trail bumps into the National\nLife Exercise Trail which itself bears left. At that point turn right and\nhead to the Vt. Fish and Game Building in the National Life complex.\nThe path can be reversed.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.578032, 44.257591 ] } },
+      { "type": "Feature", "properties": { "code": "1C3", "description": "Trail Access", "detailed_description": "Lengthy trails in the National Life’s Woods trails called Rob’s Trails:\nGo to the end of Mountain View Street’s western dead-end, past an\nopen or shut gate, then past the walled Electrical Transfer Station and\nfind a descending trail. It is best to take the first right diversion down\nthe hill to a dying Langdon Pond as this is the easiest path. The other\ndiversion will get you down as well. In both cases take a right turn on a\nflat path past the dying pond, across a short wooden bridge until you\ncome to the Rob’s Trails sign. There are multiple Rob’s Trails. From the\ntrail sign I recommend: go up the trail and follow ribbon markers and\neventually explore the variety of trails. You may cross the major stone\nwall and continue quite a ways until you can see fields lying west of\nNorthfield St., then return on the same path or continue and the path\nwill circle back a different way to the stone wall. If you get lost beyond\nthe stone wall, first get back to it. If you get lost either after returning\n\n19\npast the stone wall or without passing through the stone wall in the\nfirst place, just head back and down some trail towards the sounds of\ntraffic to the pond path and then up the now ascending path you came\nin by. It helps to observe during your original descent the place where\nthe pond path will take a 90 degree turn up the hill. Essentially after\npassing the pond, find a path up the hill. I’ve gotten lost a few times,\nbut following the above ‘up and down directions’ have gotten me back\nfairly easily. (Note I’ve talked to National Life people who slightly\nreluctantly said it’s OK, but don’t encourage large crowds as these\nwoods owned by National Life is primarily for its nearby employees.\nSince I’ve never have had large crowds on the many walks I’ve led there\nand since National Life is such a good community supporter, I strongly\nrecommend small groups do take the walks, ideally with National Life\nemployees.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.587457, 44.25486 ] } },
+      { "type": "Feature", "properties": { "code": "1D1", "description": "Trail Access", "detailed_description": "Paths in Woods of the Hill Farm Hill between Northfield and Hill\nSt. There are several entrances but I think the easiest to find is to walk\nup a driveway directly across the street from Econo-Lodge on\nNorthfield St. right by a blue, decorated gate, up a driveway to an\napartment building and you will come to an old barn (my favorite barn)\nlocated at the end of the driveway where you take a left along a\ndriveway-like road which fairly soon turns into a path or trail. From\nthere ascend the path up the Hill Farm Hill where it intersects with\nanother path. Take a right along a valley and beyond through its lovely\nwoods. On the path you will see an interesting cairn, and other objects\nas well, and bump into other paths to other entrances including one\ndown to Hill St. and one to another spot-on Northfield St. if you turn\nleft instead of right after your first ascension, the path will go to\nPleasant St. If you go right at the first main intersection as most people\ngo, eventually you will come to the ‘Hill Farm. It is bounded by definite\nNo Trespassing Signs in front of a barrier fence. Many neighborhood\nfolks walk in these woods (not the field) and some have said ‘the\nabsent-from-Montpelier owner has no objection to responsible\nwalkers.’ Because of the many paths, be alert so you can return the\nway you came in or be adventurous and see where you end up.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.580188, 44.251659 ] } },
+      { "type": "Feature", "properties": { "code": "2D6", "description": "Trail Access", "detailed_description": "Path in an undeveloped city park and its neighboring woods. Trail beginning: At the very end of Hebert St. opposite Stone Meadows Condos, there is a distinct path which takes you up to the open field of the city park. At that point the path disappears but walking along the edge of the open areas next to the woods. you will come to a path which descends into the woods: the woods itself descends minus a trail to the Barre-Montpelier Rd. Fairly soon you will come to a path to the left which will take you to the bottom of Isabel Circle. The paths forward which meander sidewards and downwards gradually fade out. Beyond, bush- wacking is possible, but I have not done extensive bush-wacking so you are on your own if you do so.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.558225, 44.24299 ] } },
+      { "type": "Feature", "properties": { "code": "5D6", "description": "Trail Access", "detailed_description": "Path to connect with Sabin’s Pasture trails through to the Elks Club\nGolf Course; Across from a small square house on the corner of\nGreenock and Dyer there is a mowed path through a field continuing to a short path through woods which bumps into the Sabin’s  Pasture to  50 Elk Golf Club trails. Bear to the right on the short path before you get to the main trail and on the way back bear to the left on the short trail. Note the location of the key turn as there are a few other ways to head back toward streets connected to the Towne Hill Rd area. You will need to do some exploring as there is more than one paths on this corridor of paths. The views are spectacular especially on the Sabin’s Pasture trails. Remember you can enter also behind the College of Fine Arts as described in 3D designations, but this Greenock entry has fewer climbing challenges.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.551858, 44.256751 ] } },
+      { "type": "Feature", "properties": { "code": "1B10", "description": "Viewpoint", "detailed_description": "Views in many directions from the National Life Car Ramp at the\nfar end of the National Life Complex: Middlesex Hills, Lower State St.\nRidge, Hubbard Park Hill, Worcester Range, and looking down on\nMontpelier you can see much of Montpelier City but not the State\nHouse (possibly viewable after the leaves are off.)", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.582043, 44.257906 ] } },
+      { "type": "Feature", "properties": { "code": "5D10", "description": "Water Tower", "detailed_description": "Path in woods beyond the Water Tower which is located at the end of an unnamed public road with gate off the private Connor Rd. While on Connor Rd if asked (I’ve walked there many times  and have never been asked) why you are there, tell them you are walking to the Water Tower. As you circle the Water Tower you will see a trail in the the woods eventually to an open field which then circles back to the Water tower. There is another trail south of the Water Tower which heads east that I have never gone on.", "address": null, "category": "Recreation" }, "geometry": { "type": "Point", "coordinates": [ -72.548747, 44.265533 ] } }
+      ]
       };
 
       /**
@@ -312,20 +293,20 @@
       **/
       function addMarkers() {
         /* For each feature in the GeoJSON object above: */
-        attractions.features.forEach(function(marker) {
+        attractions.features.forEach(function(garden_marker) {
           /* Create a div element for the marker. */
           var el = document.createElement('div');
           /* Assign a unique `id` to the marker. */
-          el.id = "marker-" + marker.properties.id;
+          el.id = "marker-" + garden_marker.properties.id;
           /* Assign the `marker` class to each marker for styling. */
-          el.className = 'marker';
+          el.className = 'garden_marker'
 
           /**
            * Create a marker using the div element
            * defined above and add it to the map.
           **/
-          new mapboxgl.Marker(el, { offset: [0, -23] })
-            .setLngLat(marker.geometry.coordinates)
+          new mapboxgl.Marker(el, { offset: [0, 0] })
+            .setLngLat(garden_marker.geometry.coordinates)
             .addTo(map);
 
           /**
@@ -336,16 +317,16 @@
           **/
           el.addEventListener('click', function(e){
             /* Fly to the point */
-            flyToStore(marker);
+            flyToStore(garden_marker);
             /* Close all other popups and display popup for clicked store */
-            createPopUp(marker);
+            createPopUp(garden_marker);
             /* Highlight listing in sidebar */
             var activeItem = document.getElementsByClassName('active');
             e.stopPropagation();
             if (activeItem[0]) {
               activeItem[0].classList.remove('active');
             }
-            var listing = document.getElementById('listing-' + marker.properties.id);
+            var listing = document.getElementById('listing-' + garden_marker.properties.id);
             listing.classList.add('active');
           });
         });
@@ -375,13 +356,13 @@
           link.href = '#';
           link.className = 'title';
           link.id = "link-" + prop.id;
-          link.innerHTML = prop.label;
+          link.innerHTML = prop.category;
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = prop.address;
-          if (prop.crossStreet) {
-            details.innerHTML += ' (' + prop.crossStreet + ')';
+          details.innerHTML = prop.description;
+          if (prop.code) {
+            details.innerHTML += ' (' + prop.code + ')';
           }
 
           /**
@@ -427,8 +408,8 @@
         if (popUps[0]) popUps[0].remove();
         var popup = new mapboxgl.Popup({closeOnClick: false})
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>' + currentFeature.properties.label + '</h3>' +
-            '<h4>' + currentFeature.properties.description + '</h4>')
+          .setHTML('<h3>' + currentFeature.properties.category + '</h3>' +
+            '<h4>' + currentFeature.properties.detailed_description + '</h4>')
           .addTo(map);
       }
     </script>

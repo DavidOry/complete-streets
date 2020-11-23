@@ -1,0 +1,67 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.59094069,
+          44.260754
+        ]
+      },
+      "properties": {
+        "label": "3A2",
+        "address": "187 Lower State Street",
+        "city": "Montpelier",
+        "country": "United States",
+        "crossStreet": "west of Bailey Ave",
+        "postalCode": "05602",
+        "state": "VT",
+        "description": "Three House-Garden-Design (HGD): one located at #187 Lower State St. (my favorite with many decorative items) and another HGD (house set back very near #187, probably #189 which was 'the original now refurbished in the area,' and #185 not bad and views of the Winooski."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.58308472,
+          44.26156863
+        ]
+      },
+      "properties": {
+        "label": "3A4",
+        "address": "134 State Street",
+        "city": "Montpelier",
+        "country": "United States",
+        "crossStreet": "west of Governor Aiken Ave",
+        "postalCode": "05602",
+        "state": "VT",
+        "streetViewUrl": "https://www.google.com/maps/@44.261797,-72.5829275,3a,75y,203.63h,97.03t/data=!3m7!1e1!3m5!1sn2yWLXH4J7MAjMo381TEpg!2e0!6s%2F%2Fgeo0.ggpht.com%2Fcbk%3Fpanoid%3Dn2yWLXH4J7MAjMo381TEpg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D276.48837%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192",
+        "description": "A sculpture garden is located on State Street between the Visitor Center and the Arts Council building itself often open with art works displayed. The sculptures are changed so no specific descriptions are listed here. The Arts Council building was 'the childhood home of Senator Patrick Leahy'"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.58252917,
+          44.26149768
+        ]
+      },
+      "properties": {
+        "label": "3A5",
+        "address": "132 State Street",
+        "city": "Montpelier",
+        "country": "United States",
+        "crossStreet": "at Governor Aiken Ave",
+        "postalCode": "05602",
+        "state": "VT",
+        "streetViewUrl": "https://www.google.com/maps/@44.2616992,-72.5825078,3a,87.6y,213.9h,83.97t/data=!3m6!1e1!3m4!1sHth738eX9mrZRyDu3dhSGw!2e0!7i16384!8i8192",
+        "description": "Three House-Garden-Design (HGD) located at #126, #128, and #132 State Street. Three classic Queen Anne Style original homes for some Montpelier businessmen and now State Government Buildings. One of the three is one of my two favorite Queen Anne style homes in Montpelier, located at #132. Do you agree?"
+      }
+    }
+  ]
+}
