@@ -118,12 +118,30 @@
         background-color: rgba(0, 0, 0, 0);
       }
 
-      .garden_marker {
+      .marker-f{
         border: none;
         cursor: pointer;
         height: 15px;
         width: 15px;
         background-image: url(garden-15.svg);
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .marker-a {
+        border: none;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-image: url(art-gallery-15.svg);
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .marker-r {
+        border: none;
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        background-image: url(picnic-site-15.svg);
         background-color: rgba(0, 0, 0, 0);
       }
 
@@ -293,20 +311,29 @@
       **/
       function addMarkers() {
         /* For each feature in the GeoJSON object above: */
-        attractions.features.forEach(function(garden_marker) {
+        attractions.features.forEach(function(marker) {
+
           /* Create a div element for the marker. */
           var el = document.createElement('div');
           /* Assign a unique `id` to the marker. */
-          el.id = "marker-" + garden_marker.properties.id;
+          el.id = "marker-" + marker.properties.id;
           /* Assign the `marker` class to each marker for styling. */
-          el.className = 'garden_marker'
+          if (marker.properties.category == "Flora & Fauna") {
+            el.className = 'marker-f'
+          } else if (marker.properties.category == "Art") {
+            el.className = 'marker-a'
+          } else if (marker.properties.category == "Recreation") {
+            el.className = 'marker-r'
+          } else {
+            el.className = 'marker'
+          }
 
           /**
            * Create a marker using the div element
            * defined above and add it to the map.
           **/
           new mapboxgl.Marker(el, { offset: [0, 0] })
-            .setLngLat(garden_marker.geometry.coordinates)
+            .setLngLat(marker.geometry.coordinates)
             .addTo(map);
 
           /**
@@ -317,16 +344,16 @@
           **/
           el.addEventListener('click', function(e){
             /* Fly to the point */
-            flyToStore(garden_marker);
+            flyToStore(marker);
             /* Close all other popups and display popup for clicked store */
-            createPopUp(garden_marker);
+            createPopUp(marker);
             /* Highlight listing in sidebar */
             var activeItem = document.getElementsByClassName('active');
             e.stopPropagation();
             if (activeItem[0]) {
               activeItem[0].classList.remove('active');
             }
-            var listing = document.getElementById('listing-' + garden_marker.properties.id);
+            var listing = document.getElementById('listing-' + marker.properties.id);
             listing.classList.add('active');
           });
         });
