@@ -90,9 +90,58 @@
         font-weight:700;
       }
 
+      .listings .item .art-title {
+        display:block;
+        color:#00853e;
+        font-weight:700;
+      }
+
+      .listings .item .garden-title {
+        display:block;
+        color:#00853e;
+        font-weight:700;
+      }
+
+      .listings .item .picnic-title {
+        display:block;
+        color:#00853e;
+        font-weight:700;
+      }
+
+      .listings .item .misc-title {
+        display:block;
+        color:#00853e;
+        font-weight:700;
+      }
+
       .listings .item .title small { font-weight:400; }
       .listings .item.active .title,
       .listings .item .title:hover { color:#8cc63f; }
+
+      .listings .item .art-title small { font-weight:400; }
+      .listings .item .art-title:before{ content: url(art-gallery-15-dark-green.svg); }
+      .listings .item.active .art-title,
+      .listings .item .art-title:hover { color:#8cc63f; }
+      .listings .item .art-title:hover:before{ content: url(art-gallery-15-light-green.svg); }
+
+      .listings .item .garden-title small { font-weight:400; }
+      .listings .item .garden-title:before{ content: url(garden-15-dark-green.svg); }
+      .listings .item .garden-title:hover:before{ content: url(garden-15-light-green.svg); }
+      .listings .item.active .garden-title,
+      .listings .item .garden-title:hover { color:#8cc63f; }
+
+      .listings .item .picnic-title small { font-weight:400; }
+      .listings .item .picnic-title:before{ content: url(picnic-site-15-dark-green.svg); }
+      .listings .item.active .picnic-title,
+      .listings .item .picnic-title:hover { color:#8cc63f; }
+      .listings .item .picnic-title:hover:before{ content: url(picnic-site-15-light-green.svg); }
+
+      .listings .item .misc-title small { font-weight:400; }
+      .listings .item .misc-title:before{ content: url(marker-15-dark-green.svg); }
+      .listings .item.active .misc-title,
+      .listings .item .misc-title:hover { color:#8cc63f; }
+      .listings .item .misc-title:hover:before{ content: url(marker-15-light-green.svg); }
+
       .listings .item.active {
         background-color:#f8f8f8;
       }
@@ -250,7 +299,6 @@
         float: right;
         color: black;
         font-size: 24px;
-        font-weight: bold;
       }
       .close-btn:hover {
         color: darkgray;
@@ -451,9 +499,20 @@
           /* Add the link to the individual listing created above. */
           var link = listing.appendChild(document.createElement('a'));
           link.href = '#';
+
           link.className = 'title';
+          if (prop.category == "Art"){
+            link.className = 'art-title'
+          } else if (prop.category == "Flora & Fauna") {
+            link.className = 'garden-title'
+          } else if (prop.category == "Recreation") {
+            link.className = 'picnic-title'
+          } else if (prop.category == "Miscellany") {
+            link.className = 'misc-title'
+          }
+
           link.id = "link-" + prop.id;
-          link.innerHTML = prop.category;
+          link.innerHTML = " " + prop.category;
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
