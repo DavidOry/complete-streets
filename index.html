@@ -18,6 +18,18 @@
         -webkit-font-smoothing:antialiased;
       }
 
+      a:link {
+        color: 00853e;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #8cc63f;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
       * {
         -webkit-box-sizing:border-box;
         -moz-box-sizing:border-box;
@@ -120,9 +132,9 @@
 
       .listings .item .art-title small { font-weight:400; }
       .listings .item .art-title:before{ content: url(art-gallery-15-dark-green.svg); }
+      .listings .item .art-title:hover:before{ content: url(art-gallery-15-light-green.svg); }
       .listings .item.active .art-title,
       .listings .item .art-title:hover { color:#8cc63f; }
-      .listings .item .art-title:hover:before{ content: url(art-gallery-15-light-green.svg); }
 
       .listings .item .garden-title small { font-weight:400; }
       .listings .item .garden-title:before{ content: url(garden-15-dark-green.svg); }
@@ -132,15 +144,15 @@
 
       .listings .item .picnic-title small { font-weight:400; }
       .listings .item .picnic-title:before{ content: url(picnic-site-15-dark-green.svg); }
+      .listings .item .picnic-title:hover:before{ content: url(picnic-site-15-light-green.svg); }
       .listings .item.active .picnic-title,
       .listings .item .picnic-title:hover { color:#8cc63f; }
-      .listings .item .picnic-title:hover:before{ content: url(picnic-site-15-light-green.svg); }
 
       .listings .item .misc-title small { font-weight:400; }
       .listings .item .misc-title:before{ content: url(marker-15-dark-green.svg); }
+      .listings .item .misc-title:hover:before{ content: url(marker-15-light-green.svg); }
       .listings .item.active .misc-title,
       .listings .item .misc-title:hover { color:#8cc63f; }
-      .listings .item .misc-title:hover:before{ content: url(marker-15-light-green.svg); }
 
       .listings .item.active {
         background-color:#f8f8f8;
@@ -287,9 +299,11 @@
       .modal-content {
         position: relative;
         background-color: white;
-        padding: 20px;
+        padding: 40px;
         margin: auto;
         width: 75%;
+        font-size: 18px;
+        color: #4f4f4f;
         -webkit-animation-name: animatetop;
         -webkit-animation-duration: 0.4s;
         animation-name: animatetop;
@@ -328,7 +342,7 @@
     <div class="modal">
       <div class="modal-content">
         <span class="close-btn">&times;</span>
-        <p>TODO: Add text here explaining what the map is about.</p>
+        <p>This walking points is based on the self published guidebook, "Travel Walking / Awe Walking In the City of Montpelier", by Harris Webster. The concept of a self-guided walking map was developed and implemented by Montpelier's Complete Streets Committee. This map was developed with a hope to encourage more residents and visitors to enjoy a walk through the Capitol City and discover many of the lesser known treasures beyond Main Street alone. To learn more about the Complete Streets Committee, please visit <a href="https://www.montpelier-vt.org/907/Complete-Streets-Committee", target="_blank">https://www.montpelier-vt.org/907/Complete-Streets-Committee</a>.</p>
       </div>
     </div>
     <script>
